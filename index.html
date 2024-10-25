@@ -1,11 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FATEC 😘</title>
 </head>
+
 <body>
-    <h1>oi :D</h1>
+    <p>Email</p>
+    <input type="email" id="email">
+    <p>Senha</p>
+    <input type="password" id="senha">
+
+    <input type="submit" value="Acessar" onclick="validateLogin()">
 </body>
+
 </html>
+
+<script type="text/javascript">
+
+    function validateLogin() {
+        let email = document.getElementById('email').value
+        let password = document.getElementById('senha').value
+
+        if (email === null || email === '') {
+            alert('Email nao pode ser vazio')
+            return false;
+        }
+
+        if (password === null || password === '') {
+            alert('Senha nao pode ser vazio')
+            return false;
+        }
+
+        alert('Acesso autorizado')
+        return true;
+    }
+</script>
